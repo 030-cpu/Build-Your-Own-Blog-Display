@@ -107,13 +107,6 @@ function createEngagement(post) {
   return postEngagement;
 }
 
-/* // deleting post 
-function deletingPosts(post){
-    const deleteButton = document.createElement('button');
-    deleteButton.classList.add('delete-button');
-    deleteButton.textContent = `${post.deletingPosts}`
-} */
-
 function messagePost(post) {
   const postTitle = document.createElement('h2');
   postTitle.classList.add('post-title');
@@ -146,26 +139,3 @@ function renderBlogs(blogs) {
 }
 
 getBlogs();
-
-/* async function deleteBlogSlug(slug) {
-  const response = await fetch(`${API_BASE}/api/v1/blogs/${slug}`, {
-    method: 'DELETE',
-    headers: {
-      Authorization: `Bearer ${API_KEY}`
-    }
-  });
-
-  const data = await response.json().catch(() => null);
-
-  if (!response.ok) {
-    const message = data?.error || `HTTP Error: ${response.status}`;
-    throw new Error(message);
-  }
-
-  return data;
-}
-
-deleteBlogSlug(deleteBlogOne); */
-
-// blog detail page 9-24-26
-
